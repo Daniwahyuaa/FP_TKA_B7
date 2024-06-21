@@ -21,6 +21,17 @@
 | 5  | VM3-Database     | Regular 1vCPU 2GB Memory| Database Server| $12         |
 |    | **TOTAL**        |                         |                | **$40**     |
 
+**Masalah yang Mungkin:**
+
+1. **Beban Server Database:**
+   - Database Server hanya memiliki 1vCPU dan 2GB memori, yang mungkin tidak cukup jika beban database meningkat.
+   
+2. **Reliabilitas dan Ketersediaan:**
+   - Tidak ada redundansi untuk Database Server. Jika server ini gagal, seluruh sistem akan terhenti.
+
+3. **Skalabilitas:**
+   - Menggunakan tiga App Worker dengan 1vCPU dan 1GB memori masing-masing mungkin kurang efisien dibandingkan dengan menggunakan VM yang lebih kuat atau menambahkan mekanisme auto-scaling.
+
 
 ## Rancangan Arsitektur Cloud 1
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/854c6f34-dfd2-4a02-9ee4-fd86f5dbd11b)
@@ -34,4 +45,17 @@
 | 4  | VM3-Database     | Regular 1vCPU 2GB Memory| Database Server| $12         |
 |    | **TOTAL**        |                         |                | **$48**     |
 
+**Masalah yang Mungkin:**
+
+1. **Redundansi App Worker:**
+   - Dalam konfigurasi ini, hanya ada dua App Worker. Jika salah satu dari mereka gagal, beban akan menjadi sangat berat untuk satu worker yang tersisa.
+
+2. **Beban Server Database:**
+   - Sama seperti pada Konfigurasi 1, Database Server hanya memiliki 1vCPU dan 2GB memori yang mungkin tidak cukup jika beban database meningkat.
+
+3. **Ketersediaan:**
+   - Tidak ada redundansi atau failover untuk Database Server. Jika server ini gagal, aplikasi tidak bisa mengakses database.
+
+4. **Load Balancer:**
+   - Load Balancer hanya memiliki 1vCPU dan 2GB memori, yang mungkin tidak cukup jika beban lalu lintas sangat tinggi.
 
