@@ -8,58 +8,7 @@
 |5027231068|M. Fadhil S.|
 |5027231084|Farand F.|
 
-## Rancangan Arsitektur Cloud 1
-![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/86c268df-c573-4360-bd25-7c363f06bf7b)
-
-## Configuration 1
-| No | Name             | Specifications          | Function       | Price/Month |
-|----|------------------|-------------------------|----------------|-------------|
-| 1  | VM3-LoadBalancer | Regular 1vCPU 2GB Memory| Load Balancer  | $12         |
-| 2  | VM2-Worker1      | Regular 1vCPU 1GB Memory| App Worker 1   | $8          |
-| 3  | VM2-Worker2      | Regular 1vCPU 1GB Memory| App Worker 2   | $8          |
-| 4  | VM2-Worker3      | Regular 1vCPU 1GB Memory| App Worker 3   | $8          |
-| 5  | VM3-Database     | Regular 1vCPU 2GB Memory| Database Server| $12         |
-|    | **TOTAL**        |                         |                | **$40**     |
-
-**Masalah yang Mungkin:**
-
-1. **Beban Server Database:**
-   - Database Server hanya memiliki 1vCPU dan 2GB memori, yang mungkin tidak cukup jika beban database meningkat.
-   
-2. **Reliabilitas dan Ketersediaan:**
-   - Tidak ada redundansi untuk Database Server. Jika server ini gagal, seluruh sistem akan terhenti.
-
-3. **Skalabilitas:**
-   - Menggunakan tiga App Worker dengan 1vCPU dan 1GB memori masing-masing mungkin kurang efisien dibandingkan dengan menggunakan VM yang lebih kuat atau menambahkan mekanisme auto-scaling.
-
-
-## Rancangan Arsitektur Cloud 1
-![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/854c6f34-dfd2-4a02-9ee4-fd86f5dbd11b)
-
-## Configuration 2
-| No | Name             | Specifications          | Function       | Price/Month |
-|----|------------------|-------------------------|----------------|-------------|
-| 1  | VM3-LoadBalancer | Regular 1vCPU 2GB Memory| Load Balancer  | $12         |
-| 2  | VM2-Worker       | Regular 1vCPU 2GB Memory| App Worker 1   | $12         |
-| 3  | VM2-Worker1      | Regular 1vCPU 2GB Memory| App Worker 2   | $12         |
-| 4  | VM3-Database     | Regular 1vCPU 2GB Memory| Database Server| $12         |
-|    | **TOTAL**        |                         |                | **$48**     |
-
-**Masalah yang Mungkin:**
-
-1. **Redundansi App Worker:**
-   - Dalam konfigurasi ini, hanya ada dua App Worker. Jika salah satu dari mereka gagal, beban akan menjadi sangat berat untuk satu worker yang tersisa.
-
-2. **Beban Server Database:**
-   - Sama seperti pada Konfigurasi 1, Database Server hanya memiliki 1vCPU dan 2GB memori yang mungkin tidak cukup jika beban database meningkat.
-
-3. **Ketersediaan:**
-   - Tidak ada redundansi atau failover untuk Database Server. Jika server ini gagal, aplikasi tidak bisa mengakses database.
-
-4. **Load Balancer:**
-   - Load Balancer hanya memiliki 1vCPU dan 2GB memori, yang mungkin tidak cukup jika beban lalu lintas sangat tinggi.
-  
-Permasalahan
+# Permasalahan
 Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah Keampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.
 
 Pada suatu saat anda mendapatkan project untuk mendeploy sebuah aplikasi Sentiment Analysis dengan komponen Backend menggunakan python: sentiment-analysis.py.
@@ -68,12 +17,12 @@ Kemudian juga disediakan sebuah Frontend sederhana menggunakan index.html dan st
 
 Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah 1 juta rupiah per bulan (65 US$) konfigurasi cloud terbaik seperti apa yang bisa dibuat?
 
-Desain Rancangan Arsitektur Komputasi Awan dan Tabel Harga
+## Desain Rancangan Arsitektur Komputasi Awan dan Tabel Harga
 Untuk cloud service provider yang kami gunakan untuk final project ini adalah Digital Ocean karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini. WhatsApp Image 2024-06-25 at 22 55 21_06b9f5f8
 
 Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. WhatsApp Image 2024-06-25 at 22 55 25_f8d72088
 
-Implementasi
+## Implementasi
 1. Setup MongoDB
 image
 
@@ -109,7 +58,8 @@ image
 
 6. Locustfile
 Lakukan deploy terhadap locustfile menggunakan locust -f locustfile.py --host http://(IP backend):80
-Pengujian API
+
+## Pengujian API
 1. Analyze text
 Akses melalui ip-address-frontend/analyze
 image
@@ -118,7 +68,7 @@ image
 Akses melalui ip-address-backend/history
 image
 
-Hasil Load Testing
+## Hasil Load Testing
 Jumlah RPS maksimum selama 60 detik image Untuk mencari jumlah RPS maksimum, berikut adalah konfigurasi locust kami.
 Number of users: 1500
 
@@ -140,7 +90,7 @@ Saat pengujian dengan spawn rate 200, didapatkan peak concurrency maksimum 2000 
 Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 500 dan durasi waktu load testing 60 detik image
 Saat pengujian dengan spawn rate 500, didapatkan peak concurrency maksimum 1500 dengan failure 0% serta rata-rata RPS 95,6 dengan peak RPS 251,63.
 
-Kesimpulan
+## Kesimpulan
 Berdasarkan pengetesan yang kita lakukan menggunakan locust yang telah disediakan, ada beberapa faktor yang memengaruhi pengetesan tersebut yaitu koneksi internet, peak concurrency yang diinput, spawn rate dalam bentuk users/second yang diinput serta spesifikasi dari vm yang akan diisi dengan backend. Lalu dalam pengetesan ini juga kami menggunakan mongodb Compass yang merupakan GUI dari jenis database yang kita gunakan untuk menghapus data dari pengetesan sebelumnya untuk melakukan pengetesan baru agar optimal.
 
 Berdasarkan pengetesan yang kita dapat juga bisa diambil bahwa semakin banyak spawn rate yang kita gunakan, semakin kecil peak concurrency dari stress test ini lalu RPS atau Request Per Second akan semakin tinggi. Apabila dalam projek kedepannya diperlukan vm serta pengujian yang mementingkan titik kerja dalam backend maka kita memerlukan vm yang diperuntukkan dalam keperluan backend yang lebih banyak dan membuat load balancer untuk vm-vm tersebut serta membuat vm-vm yang diperlukan untuk back-end tersebut dengan spesifikasi yang maksimal serta storage yang cukup untuk keperluan database.
