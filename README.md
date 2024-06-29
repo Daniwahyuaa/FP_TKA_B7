@@ -27,25 +27,24 @@ Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah se
 Tabel Harga
 Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Frontend. Berikut untuk spesifikasi VM yang kami gunakan.
 
-|No.	|Nama	|Spesifikasi	|Fungsi	|Harga/Bulan|
-|1.	|VM1	Size Standard B1s, 1vCPUs, Ram 1GB	|Backend	|$10,66|
-|2.	|VM2	Size Standard B1s, 1vCPUs, Ram 1GB	|Frontend	|$10,66|
-||||Total		|$15,18
+| No. | Nama | Spesifikasi | Fungsi | Harga/Bulan |
+|----|------|-------------|--------|-------------|
+| 1. | VM1  | Size Standard B1s, 1vCPUs, Ram 1GB | Backend | $10.66 |
+| 2. | VM2  | Size Standard B1s, 1vCPUs, Ram 1GB | Frontend | $10.66 |
+|--|--|--|Total | $21.32 |
 
 
 <details>
 <summary><h3>Klik Disini</h3></summary>
 ## Implementasi
-1. Setup MongoDB
-image
+1. VM 1
+![Screenshot 2024-06-29 164224](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/f1e56a4f-2638-4bff-b256-7e4ec30ec63d)
 
-2. Setup 2 Droplet 8$ untuk Back-End
-image
+2. VM 2
+![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
 
-image
-
-3. Setup 1 Droplet 8$ untuk Front-End
-image
+3. MongoDB
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/fce4f059-ea96-4f85-86b1-ff2e04000e3e)
 
 4. Setup Front-End
 Install apache2 dengan command sudo apt-get install apache2
