@@ -20,10 +20,21 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ## Desain Rancangan Arsitektur Komputasi Awan dan Tabel Harga
 Untuk cloud service provider yang kami gunakan untuk final project ini adalah Digital Ocean karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini. -image
 
-Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. -image
+Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. 
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/2e3f8afc-2078-43c2-adba-e8119ffaae97)
+
+## Rancangan
+Tabel Harga
+Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Frontend. Berikut untuk spesifikasi VM yang kami gunakan.
+
+|No.	|Nama	|Spesifikasi	|Fungsi	|Harga/Bulan|
+|1.	|VM1	Size Standard B1s, 1vCPUs, Ram 1GB	|Backend	|$10,66|
+|2.	|VM2	Size Standard B1s, 1vCPUs, Ram 1GB	|Frontend	|$10,66|
+||||Total		|$15,18
+
 
 <details>
-<summary><h3>Klik Disini (TAR APUS APUSIN AJA YANG GAGUNA OK?)</h3></summary>
+<summary><h3>Klik Disini</h3></summary>
 ## Implementasi
 1. Setup MongoDB
 image
