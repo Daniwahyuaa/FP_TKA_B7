@@ -42,6 +42,8 @@ Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Fr
 ```
 ssh -i ~/.ssh/id_rsa.pem daniwahyuaa@52.184.80.106
 ```
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/cd947e5d-7920-490e-90c3-f833261d3073)
+
 
 3. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
