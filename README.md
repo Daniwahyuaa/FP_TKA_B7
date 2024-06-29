@@ -46,11 +46,57 @@ Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Fr
 ssh -i ~/.ssh/id_rsa.pem daniwahyuaa@52.184.80.106
 ```
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/cd947e5d-7920-490e-90c3-f833261d3073)
+#### Membuat file sentiment-analysis.py
+```py
+from flask import Flask, request, jsonify
+from flask_pymongo import PyMongo
+from textblob import TextBlob
+from datetime import datetime
 
+app = Flask(__name__)
+app.config["MONGO_URI"] = "mongodb://localhost:27017/sentiment_analysis_db"
+mongo = PyMongo(app)
 
-3. VM 2
+@app.route('/analyze', methods=['POST'])
+def analyze_sentiment():
+    data = request.json
+    text = data.get('text')
+    if not text:
+        return jsonify({'error': 'No text provided'}), 400
+
+    analysis = TextBlob(text)
+    sentiment = analysis.sentiment.polarity
+    mongo.db.sentiments.insert_one({
+        'text': text,
+        'sentiment': sentiment,
+        'date': datetime.utcnow()
+    })
+    return jsonify({'sentiment': sentiment}), 200
+
+@app.route('/history', methods=['GET'])
+def get_history():
+    sentiments = list(mongo.db.sentiments.find().sort("date", -1))
+    for sentiment in sentiments:
+        sentiment['_id'] = str(sentiment['_id'])
+    return jsonify(sentiments), 200
+
+@app.route('/delete-history', methods=['POST'])
+def delete_history():
+    mongo.db.sentiments.delete_many({})
+    return '', 204
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+2. MongoDB
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/0f4aab85-cf8a-4538-b878-8a323c967655)
+Pindahkan File ke Backend
+```
+-nope
+```
+3.. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
 
-4. MongoDB
+5. MongoDB
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/fce4f059-ea96-4f85-86b1-ff2e04000e3e)
 
