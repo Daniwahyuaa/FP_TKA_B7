@@ -89,7 +89,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
 2. MongoDB
-![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/0f4aab85-cf8a-4538-b878-8a323c967655)
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/a09dc2e2-217a-4140-a48e-e2c83b935ec2)
 Pindahkan File ke Backend
 ```
 -nope
@@ -97,6 +97,4 @@ Pindahkan File ke Backend
 3.. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
 
-5. MongoDB
-![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/fce4f059-ea96-4f85-86b1-ff2e04000e3e)
 
