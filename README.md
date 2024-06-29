@@ -127,5 +127,10 @@ sudo systemctl status mongod
 
 3.. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
+pertama-tama kita akses di PowerShell
+```
+ssh -i ~/.ssh/id_rsa.pem daniwahyuaa@40.81.22.20
+```
+
 
 
