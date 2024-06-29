@@ -37,14 +37,19 @@ Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Fr
 ## Implementasi
 1. VM 1
 ![Screenshot 2024-06-29 164224](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/f1e56a4f-2638-4bff-b256-7e4ec30ec63d)
+### BACKEND
+1. Akses Virtual Machine (Back End) di PowerShell.
+```
+ssh -i ~/.ssh/id_rsa.pem daniwahyuaa@52.184.80.106
+```
 
-2. VM 2
+3. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
 
-3. MongoDB
+4. MongoDB
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/fce4f059-ea96-4f85-86b1-ff2e04000e3e)
 
-4. Setup Front-End
+5. Setup Front-End
 Install apache2 dengan command sudo apt-get install apache2
 Konfigurasi index.html dan styles.css
 Masukkan command systemctl restart apache2 untuk restart service apache2 agar konfigurasi bisa terpakai
