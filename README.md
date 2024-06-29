@@ -90,9 +90,31 @@ if __name__ == '__main__':
 ```
 2. MongoDB
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/a09dc2e2-217a-4140-a48e-e2c83b935ec2)
+Buka PowerShell
 Pindahkan File ke Backend
 ```
--nope
+scp -i ~/.ssh/id_rsa.pem C:/download/mongodb-linux-x86_64-ubuntu2204-7.0.12.tgz daniwahyuaa@52.184.80.106:~
+```
+setelah itu
+```
+ssh -i ~/.ssh/id_rsa.pem daniwahyuaa@52.184.80.106
+```
+Edit file konfigurasi /etc/mongod.conf
+```conf
+storage:
+  dbPath: /var/lib/mongodb
+
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+
+processManagement:
+  timeZoneInfo: /usr/share/zoneinfo
 ```
 3.. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
