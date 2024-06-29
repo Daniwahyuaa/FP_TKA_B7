@@ -122,6 +122,8 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 ```
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/d51f2815-da8c-404c-ba84-3d6d1ffaf78d)
+**jalankan sentiment-analysis.py**
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/e22fbfa1-4725-4b05-ba84-9eb13e060963)
 
 3.. VM 2
 ![Screenshot 2024-06-29 164531](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/937c8353-33cc-44d4-9b22-96e7cc062495)
