@@ -93,7 +93,7 @@ if __name__ == '__main__':
 Buka PowerShell
 Pindahkan File ke Backend
 ```
-scp -i ~/.ssh/id_rsa.pem C:/download/mongodb-linux-x86_64-ubuntu2204-7.0.12.tgz daniwahyuaa@52.184.80.106:~
+scp -i ~/.ssh/id_rsa.pem C:\Users\ASUS/Downloads/mongodb-linux-x86_64-ubuntu2204-7.0.12.tgz daniwahyuaa@52.184.80.106:~
 ```
 setelah itu
 ```
