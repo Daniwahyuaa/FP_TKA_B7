@@ -142,6 +142,8 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ## Rancangan
 Pada final project kami menggunakan Microsoft Azure.
 
+![alt text](https://media.discordapp.net/attachments/1191396440845598845/1256615296131665983/YAAAAASUVORK5CYII.png?ex=668169b1&is=66801831&hm=aaa0d7e8c0f0945d57062d596e119e7389d27cc77a1c32502ec691f116c7fbef&=&format=webp&quality=lossless&width=226&height=350)
+
 
 ### Tabel Harga
 Total kami menggunakan 2 VM. VM1 sebagai Backend dan VM2 sebagai Frontend. Berikut untuk spesifikasi VM yang kami gunakan.
