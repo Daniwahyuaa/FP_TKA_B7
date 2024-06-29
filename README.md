@@ -20,7 +20,7 @@ Kemudian juga disediakan sebuah Frontend sederhana menggunakan index.html dan st
 Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah 1 juta rupiah per bulan (65 US$) konfigurasi cloud terbaik seperti apa yang bisa dibuat?
 
 ## Desain Rancangan Arsitektur Komputasi Awan dan Tabel Harga
-Untuk cloud service provider yang kami gunakan untuk final project ini adalah Digital Ocean karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini.
+Untuk cloud service provider yang kami gunakan untuk final project ini adalah Azure karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini.
 
 Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. 
 
