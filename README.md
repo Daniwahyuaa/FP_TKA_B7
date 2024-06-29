@@ -13,15 +13,16 @@ Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kem
 
 Pada suatu saat anda mendapatkan project untuk mendeploy sebuah aplikasi Sentiment Analysis dengan komponen Backend menggunakan python: sentiment-analysis.py.
 
-Kemudian juga disediakan sebuah Frontend sederhana menggunakan index.html dan styles.css dengan tampilan antarmuka sebagai berikut. image
+Kemudian juga disediakan sebuah Frontend sederhana menggunakan index.html dan styles.css dengan tampilan antarmuka sebagai berikut. 
+
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/2e3f8afc-2078-43c2-adba-e8119ffaae97)
 
 Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah 1 juta rupiah per bulan (65 US$) konfigurasi cloud terbaik seperti apa yang bisa dibuat?
 
 ## Desain Rancangan Arsitektur Komputasi Awan dan Tabel Harga
-Untuk cloud service provider yang kami gunakan untuk final project ini adalah Digital Ocean karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini. -image
+Untuk cloud service provider yang kami gunakan untuk final project ini adalah Digital Ocean karena penggunaannya yang mudah dan harganya yang cukup terjangkau bagi kami. Berikut adalah desain rancangan arsitektur komputasi awan kami untuk final project ini.
 
 Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. 
-![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/2e3f8afc-2078-43c2-adba-e8119ffaae97)
 
 ## Rancangan
 Tabel Harga
@@ -33,9 +34,6 @@ Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Fr
 | 2. | VM2  | Size Standard B1s, 1vCPUs, Ram 1GB | Frontend | $10.66 |
 |--|--|--|Total | $21.32 |
 
-
-<details>
-<summary><h3>Klik Disini</h3></summary>
 ## Implementasi
 1. VM 1
 ![Screenshot 2024-06-29 164224](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/f1e56a4f-2638-4bff-b256-7e4ec30ec63d)
@@ -101,8 +99,6 @@ Saat pengujian dengan spawn rate 200, didapatkan peak concurrency maksimum 2000 
 
 Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 500 dan durasi waktu load testing 60 detik image
 Saat pengujian dengan spawn rate 500, didapatkan peak concurrency maksimum 1500 dengan failure 0% serta rata-rata RPS 95,6 dengan peak RPS 251,63.
-
-</details>
 
 ## Endpoints:
 1. Analyze Text
