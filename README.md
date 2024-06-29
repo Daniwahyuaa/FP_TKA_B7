@@ -279,7 +279,21 @@ Setelah itu, kita setting Backendnya
 Terakhir ini untuk Rulesnya
 ![WhatsApp Image 2024-06-30 at 01 25 48_bb8d7e5f](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/6edd9e4a-3561-4708-badc-3faa91cba428)
 
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/b5a874c3-dd59-483e-ab1e-4aad014c81c4)
 
+
+# Pengujian EndPoint API
+1. Analyze
+```
+http://52.184.80.106/analyze
+```
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/4ebff6ab-8268-4f69-8998-9cda7f87863d)
+
+2. History
+```
+http://52.184.80.106/History
+```
+![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/01c25176-deda-4164-9fad-d825e8a4d276)
 
 
 
