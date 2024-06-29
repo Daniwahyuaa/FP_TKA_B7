@@ -295,5 +295,6 @@ http://52.184.80.106/History
 ```
 ![image](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/01c25176-deda-4164-9fad-d825e8a4d276)
 
-
+**Video**
+(https://drive.google.com/file/d/16tzmjGomq1veIePwQYLY3zr12F9nDNSX/view?usp=sharing)
 
