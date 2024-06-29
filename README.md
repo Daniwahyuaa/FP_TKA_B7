@@ -495,9 +495,6 @@ Dengan melakukan Rezise VM berikut hasil Locust testing.
 # Kesimpulan dan Saran
 Gunakan spesifikasi VM dengan maksimal asalkan tidak melebihi budget yang di tentukan.
 
-# Video Revisi
-Klik [Video]()
-
 ## Kesimpulan
 Berdasarkan pengetesan yang kita lakukan menggunakan locust yang telah disediakan, ada beberapa faktor yang memengaruhi pengetesan tersebut yaitu koneksi internet, peak concurrency yang diinput, spawn rate dalam bentuk users/second yang diinput serta spesifikasi dari vm yang akan diisi dengan backend. Lalu dalam pengetesan ini juga kami menggunakan mongodb Compass yang merupakan GUI dari jenis database yang kita gunakan untuk menghapus data dari pengetesan sebelumnya untuk melakukan pengetesan baru agar optimal.
 
