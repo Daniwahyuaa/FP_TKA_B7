@@ -25,6 +25,9 @@ Untuk cloud service provider yang kami gunakan untuk final project ini adalah Di
 Untuk tabel harga dari desain rancangan arsitektur komputasi awan kami adalah sebagai berikut. 
 
 ## Rancangan
+
+![WhatsApp Image 2024-06-29 at 21 15 31_7424e80d](https://github.com/Daniwahyuaa/FP_TKA_B7/assets/150106905/5d9bd014-bb39-4d26-b580-26de6bed3ce1)
+
 Tabel Harga
 Total kami menggunakan 2 Virtual Machine. VM1 sebagai Backend dan VM2 sebagai Frontend. Berikut untuk spesifikasi VM yang kami gunakan.
 
